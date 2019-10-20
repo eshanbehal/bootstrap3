@@ -62,9 +62,15 @@
       $('#myInquiry').on('shown.bs.modal', function(){
           
           //here instead of shown we can have show,hide,hidden.
-          window.alert('hey welcome to our page!');
+//          window.alert('hey welcome to our page!');
       });
-      
+      $('#myInquiry').on('show.bs.modal', function(event){
+          
+          var button = $(event.relatedTarget);
+          var orderNumber = button.data('ordernumber');
+          
+          $(this).find('#myModalLabel').text('Order Number : ' + orderNumber);
+      });
       </script>
       
 <!--      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>-->
