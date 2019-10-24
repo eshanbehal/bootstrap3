@@ -9,14 +9,14 @@
     </title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
       
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<!--      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">-->
     <link href="https://unpkg.com/ionicons@4.4.4/dist/css/ionicons.min.css" rel="stylesheet">
     <style>
       
     </style>
   </head>
   <body>
-      <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+      <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top" id="mynavBar">
       <div class="container-fluid">
           <div class="navbar-header">
           <a class="navbar-brand">Store</a>
@@ -31,10 +31,10 @@
           </div>
           
           <div class="navbar-collapse collapse" id="navbarCollapse">
-              <ul class="nav navbar-nav">
-              <li class="active"><a href="#">All Products</a></li>
-              <li><a href="#">Help</a></li>
-              <li><a href="#">Department <span class="caret"></span></a></li>
+              <ul class="nav navtabs">
+              <li><a href="#allProducts">All Products</a></li>
+              <li><a href="#help">Help</a></li>
+              <li><a href="#department">Department <span class="caret"></span></a></li>
               </ul>
               <form class="navbar-form navbar-left" role="search">
               <div class="input-group">
@@ -60,13 +60,81 @@
           
           
       </nav>
-    <div class="container-fluid" style="margin-top: 60px">
-      
+    <div class="container-fluid" style="margin-top: 60px ; height: 300px ; overflow: auto" data-spy="scroll" data-target="mynavBar">
+      <h4 id="allProducts">All products</h4>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <h4 id="help">Help</h4>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <h4 id="department">Department</h4>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        
     </div>
+      <div id="list-example" class="list-group">
+  <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
+  <a class="list-group-item list-group-item-action" href="#list-item-2">Item2</a>
+  <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
+  <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
+</div>
+<div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
+  <h4 id="list-item-1">Item 1</h4>
+  <p>...</p>
+  <h4 id="list-item-2">Item 2</h4>
+  <p>...</p>
+  <h4 id="list-item-3">Item 3</h4>
+  <p>...</p>
+  <h4 id="list-item-4">Item 4</h4>
+  <p>...</p>
+</div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
     </script>
     <script src="js/bootstrap.min.js">
     </script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<!--      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>-->
+      <script>
+      $('#mynavBar').on('activate.bs.scrollspy', function(){
+          
+          $('.btn-success').toggleClass('btn-warning');
+          
+      });
+      </script>
   </body>
 </html>
